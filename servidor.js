@@ -25,6 +25,17 @@ app.get('/index.php', (req, res) => {
     });
 });
 
+// Ruta para servir archivos PHP
+app.get('/contacto.php', (req, res) => {
+    exec('php -f ' + path.join(__dirname, 'contacto.php'), (error, stdout, stderr) => {
+        if (error) {
+            res.send(`Error ejecutando PHP: ${stderr}`);
+        } else {
+            res.send(stdout);
+        }
+    });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
