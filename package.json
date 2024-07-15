@@ -1,0 +1,17 @@
+{
+  "name": "mi_cv",
+  "version": "1.0.0",
+  "description": "cv",
+  "main": "index.js",
+  "scripts": {
+    "start": "node servidor.js",
+    "dev": "nodemon servidor.js"
+  },
+  "author": "MedardoCarpio",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.10.2",
+    "nodemon": "^3.1.4"
+  }
+}

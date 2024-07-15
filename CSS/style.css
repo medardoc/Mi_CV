@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Ajustar ancho máximo del slider */
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    height: 500px; /* Ajustar altura de las imágenes del slider */
+    object-fit: cover;
+    border-radius: 10px; /* Redondear esquinas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
