@@ -9,31 +9,18 @@ app.use('/img', express.static(path.join(__dirname, 'img')));
 app.use('/JS', express.static(path.join(__dirname, 'JS')));
 app.use('/index', express.static(path.join(__dirname, 'index')));
 
+
 // Ruta para servir el archivo panel.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'panel.html'));
 });
-
-// Ruta para servir archivos PHP
-app.get('/index.php', (req, res) => {
-    exec('php -f ' + path.join(__dirname, 'index.php'), (error, stdout, stderr) => {
-        if (error) {
-            res.send(`Error ejecutando PHP: ${stderr}`);
-        } else {
-            res.send(stdout);
-        }
-    });
+// Ruta para servir el archivo About.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index', 'about.html'));
 });
-
-// Ruta para servir archivos PHP
-app.get('/contacto.php', (req, res) => {
-    exec('php -f ' + path.join(__dirname, 'contacto.php'), (error, stdout, stderr) => {
-        if (error) {
-            res.send(`Error ejecutando PHP: ${stderr}`);
-        } else {
-            res.send(stdout);
-        }
-    });
+// Ruta para servir el archivo contacto.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index', 'contacto.html'));
 });
 
 const PORT = process.env.PORT || 3000;
